@@ -36,12 +36,12 @@ def read_data(path: str, format : str = 'jsonl') -> pd.DataFrame:
         raise TypeError
 
 
-def process_attributes(attr_name: str, sdg_label_names: list[str]) -> dict:
+def process_attributes(attr_name: str) -> dict:
     """Loads attributes for each sdg"""
     if 'subtopics' in attr_name:
         return json.load(open(SUBTOPICS, "r"))
     else:
-        return load_attributes(attr_name=attr_name, classes=sdg_label_names)
+        return load_attributes(attr_name=attr_name)
 
 
 def prepare_prompt(sdg_goal, main_topic, subtopic, length, style):
@@ -49,7 +49,7 @@ def prepare_prompt(sdg_goal, main_topic, subtopic, length, style):
     if sdg_goal == 'no_sdg':
         first_condition = "the paper should not be related to any UN SDG goal"
     else:
-        first_condition = f"the paper has to be related to the UN SDG goal of {sdg_goal};"
+        first_condition = f"the paper should be related to the UN SDG goal of {sdg_goal} but do not mention the SDG goal explicitly;"
 
     return f"""
                 Write an abstract of a {main_topic} paper on Web of Science, following the requirements below: \n
@@ -69,8 +69,8 @@ def clean_str(string):
 def save_generated_examples(output_dir: str, sdg_id: int, results: list[dict], attempt: int, top_p: float):
     """Saves results to output directory"""
 
-    prefix = f"gen_examples/sdg_goal_{sdg_id}/train_p_{top_p}_{attempt}.jsonl"
-    os.makedirs(f"{output_dir}/gen_examples/sdg_goal_{sdg_id}", exist_ok=True)
+    prefix = f"gen_results/sdg_goal_{sdg_id}/train_p_{top_p}_{attempt}.jsonl"
+    os.makedirs(f"{output_dir}/gen_results/sdg_goal_{sdg_id}", exist_ok=True)
     with open(f"{output_dir}/{prefix}", 'w') as f:
         for example in results:
             f.write(json.dumps(example) + "\n")
@@ -80,6 +80,7 @@ def save_generated_examples(output_dir: str, sdg_id: int, results: list[dict], a
 # ---------------
 
 async def dispatch_openai_requests(
+    client,
     messages_list: list[list[dict[str, Any]]],
     model: str,
     temperature: float,
@@ -98,7 +99,7 @@ async def dispatch_openai_requests(
         List of responses from OpenAI API.
     """
     async_responses = [
-        openai.ChatCompletion.acreate(
+        client.chat.completions.create(
             model=model,
             messages=x,
             temperature=temperature,
@@ -110,12 +111,13 @@ async def dispatch_openai_requests(
     return await asyncio.gather(*async_responses)
 
 
-def call_api_async(msg_lst, model, temperature, max_tokens):
+def call_api_async(client, msg_lst, model, temperature, max_tokens):
     print("===================================")
     print(f"call APIs, {len(msg_lst)} in total, temp={temperature}.")
 
     response = asyncio.run(
         dispatch_openai_requests(
+            client,
             messages_list=msg_lst,
             model=model,
             temperature=temperature,
@@ -123,8 +125,8 @@ def call_api_async(msg_lst, model, temperature, max_tokens):
             top_p=1.0,
         )
     )
+    ans = [x.choices[0].message.content for x in response]
 
-    ans = [x['choices'][0]['message']['content'] for x in response]
     print(f"API returns {len(ans)} in total.")
     print("===================================")
     return ans
@@ -150,9 +152,9 @@ def main(args):
     print(sdg_ids)
 
     model = args.model_name
-    openai.api_key = args.api_key
+    client = openai.AsyncOpenAI(api_key=args.api_key)
 
-    attr_dict = {attr: process_attributes(attr, sdg_id) for attr in args.attributes}
+    attr_dict = {attr: process_attributes(attr) for attr in args.attributes}
 
     # Produce examples for each sdg goal
     for sdg_id in sorted(sdg_ids):
@@ -163,7 +165,6 @@ def main(args):
         attempt = 0
         prompt_list = []  # To send prompts in batches
         prompt_attributes = []  # To store attributes of the prompt used
-        results = []  # To store returned messages
 
         random.seed(sdg_id + 1234)
 
@@ -197,12 +198,12 @@ def main(args):
             if len(prompt_list) == args.batch_size:
                 try:
                     attempt += 1
-                    return_msg = call_api_async(prompt_list, model, args.temperature, args.max_tokens)
+                    return_msg = call_api_async(client, prompt_list, model, args.temperature, args.max_tokens)
 
                     assert len(return_msg) == len(prompt_attributes)
 
                     valid = 0
-                    examples = []
+                    results = []
                     for (msg, attr) in zip(return_msg, prompt_attributes):
                         if any(word in msg for word in ['I apologize', 'sorry', 'an AI language model']):  # invalid contents
                             continue
@@ -216,32 +217,32 @@ def main(args):
                     prompt_list = []
                     prompt_attributes = []
 
-                    save_generated_examples(args.output_dir, sdg_id, examples, attempt, args.top_p)
+                    save_generated_examples(args.output_dir, sdg_id, results, attempt, args.top_p)
 
                 # Handel error cases
-                except openai.error.RateLimitError:
+                except openai.RateLimitError:
                     print("Rate Limit Error! Attempt:", attempt)
                     prompt_list = []
                     prompt_attributes = []
                     time.sleep(10)
                     continue
 
-                except  openai.error.APIError:
+                except openai.APIError:
                     print("API Error! Attempt:", attempt)
                     prompt_list = []
                     prompt_attributes = []
                     time.sleep(5)
                     continue
 
-                except openai.error.APIConnectionError:
+                except openai.APIConnectionError:
                     print("APIConnectionError", attempt)
                     prompt_list = []
                     prompt_attributes = []
                     time.sleep(5)
-                    continue 
+                    continue
 
-                except openai.error.InvalidRequestError:
-                    print("API Error! Invalid Request:", attempt)
+                except openai.BadRequestError:
+                    print("API Error! Bad Request:", attempt)
                     prompt_list = []
                     prompt_attributes = []
                     continue
