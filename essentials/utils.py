@@ -41,15 +41,45 @@ def init_default_parser():
 
     parser = argparse.ArgumentParser('')
 
-    parser.add_argument('--prompt', type=str, default='')
-    parser.add_argument('--temperature', default=1, type=float)
-    parser.add_argument('--top_p', default=0.95, type=float)
-    parser.add_argument('--n_sample', default=2, type=int, help='number of generated examples per class')
-    parser.add_argument('--batch_size', default=2, type=int, help='number of generated examples per batch')
-
-    parser.add_argument('--model_name', default='gpt-3.5-turbo', type=str, help='which model to use')
-    parser.add_argument('--model_type', default='completion', type=str, help='which model type to use')
-    parser.add_argument('--max_tokens', default=650, type=int, help='the maximum number of tokens for generation')
-    parser.add_argument('--output_dir', default='synthetic_data/produced_data', type=str, help='the folder for saving the generated text')
+    parser.add_argument(
+        '--model_name',
+        default='gpt-3.5-turbo',
+        type=str,
+        help='name of the openAI model to use'
+    )
+    parser.add_argument(
+        '--temperature',
+        default=1.0,
+        type=float
+    )
+    parser.add_argument(
+        '--top_p',
+        default=1.0,
+        type=float
+    )
+    parser.add_argument(
+        '--n_sample',
+        default=4,
+        type=int,
+        help='number of generated examples per class'
+    )
+    parser.add_argument(
+        '--batch_size',
+        default=2,
+        type=int,
+        help='number of generated examples per batch'
+    )
+    parser.add_argument(
+        '--max_tokens',
+        default=650,
+        type=int,
+        help='the maximum number of tokens for generation'
+    )
+    parser.add_argument(
+        '--output_dir',
+        default='synthetic_data/produced_data',
+        type=str,
+        help='the folder for saving the generated text'
+    )
 
     return parser
