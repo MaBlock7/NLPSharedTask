@@ -59,13 +59,13 @@ def init_default_parser():
     )
     parser.add_argument(
         '--n_sample',
-        default=4,
+        default=30,
         type=int,
         help='number of generated examples per class'
     )
     parser.add_argument(
         '--batch_size',
-        default=2,
+        default=10,
         type=int,
         help='number of generated examples per batch'
     )

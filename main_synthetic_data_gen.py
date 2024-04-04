@@ -103,11 +103,11 @@ def construct_random_prompt_attributes(
     length = random.sample(attr_dict["length"], 1)[0]
 
     return {
-        'sdg_id': sdg_id,
+        'sdg_id': int(sdg_id),
         'main_topic': main_topic,
         'sub_topic': sub_topic,
         'style': style,
-        'length': length
+        'length': int(length)
     }
 
 
@@ -138,7 +138,7 @@ def save_generated_examples(output_dir: str, sdg_id: int, results: list[dict], a
 
     prefix = f"gen_results/sdg_goal_{sdg_id}/train_p_{top_p}_{attempt}.jsonl"
     os.makedirs(f"{output_dir}/gen_results/sdg_goal_{sdg_id}", exist_ok=True)
-    with open(f"{output_dir}/{prefix}", 'w') as f:
+    with open(f"{output_dir}/{prefix}", 'a') as f:  # append mode
         for example in results:
             f.write(json.dumps(example) + "\n")
 
@@ -229,12 +229,12 @@ def main(args):
     attr_dict = {attr: process_attributes(attr) for attr in args.attributes}
 
     # Produce examples for each sdg goal
-    for sdg_id in sorted(sdg_ids):
-
-        # Set random seed
-        random.seed(sdg_id + 1234)
+    for sdg_id in sdg_ids:
 
         print(f"SDG Goal: {id2label[sdg_id]}.")
+
+        # Set random seed
+        random.seed(int(sdg_id + 1234))
 
         # Create list of random attributes dictionaries
         prompt_attributes = [construct_random_prompt_attributes(sdg_id, attr_dict) for _ in range(args.n_sample)]
