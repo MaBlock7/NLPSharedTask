@@ -14,10 +14,14 @@ from essentials.utils import (
     load_env_variable,
     init_default_parser
 )
+from essentials.data_functions import (
+    read_data
+)
+from essentials.config import (
+    ABSTRACTS,
+    GOALS
+)
 
-# GitHub paths
-ABSTRACTS = "https://raw.githubusercontent.com/ZurichNLP/sdg_swisstext_2024_sharedtask/main/data/task1_train.jsonl"
-GOALS = "https://raw.githubusercontent.com/datapopalliance/SDGs/master/SDG-goals.csv"
 
 # Data paths
 SUBTOPICS = "synthetic_data/raw_data/attributes/subtopics/subtopics.json"
@@ -44,16 +48,6 @@ class BatchIterator:
             return self.prompt_list[start_index:end_index], self.uid_list[start_index:end_index]
         else:
             raise StopIteration
-
-
-def read_data(path: str, format : str = 'jsonl') -> pd.DataFrame:
-    """Reads training data from github."""
-    if format == 'jsonl':
-        return pd.read_json(path, lines=True)
-    elif format == 'csv':
-        return pd.read_csv(path)
-    else:
-        raise TypeError
 
 
 def process_attributes(attr_name: str) -> dict:
