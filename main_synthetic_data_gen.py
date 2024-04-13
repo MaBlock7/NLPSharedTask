@@ -24,7 +24,7 @@ from essentials.config import (
 
 
 # Data paths
-SUBTOPICS = "synthetic_data/raw_data/attributes/subtopics/subtopics.json"
+SUBTOPICS = "synthetic_data/raw_data/attributes/subtopics/subtopics_new.json"
 
 # ----------------
 # HELPER FUNCTIONS
@@ -88,10 +88,10 @@ def construct_random_prompt_attributes(
     """Sample random attributes to construct prompts."""
 
     # Randomly choose one of the main topics (scientific area)
-    main_topic = random.sample(list(attr_dict['subtopics'].keys()), 1)[0]
+    main_topic = random.sample(list(attr_dict['subtopics'][sdg_id].keys()), 1)[0]
 
     # Randomly choose one of the subtopics within the chosen area
-    sub_topic = random.sample(attr_dict['subtopics'][main_topic], 1)[0]
+    sub_topic = random.sample(attr_dict['subtopics'][sdg_id][main_topic], 1)[0]
 
     style = random.sample(attr_dict["style"], 1)[0]
     length = random.sample(attr_dict["length"], 1)[0]
