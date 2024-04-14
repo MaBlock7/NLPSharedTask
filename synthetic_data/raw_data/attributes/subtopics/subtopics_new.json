@@ -1,5 +1,5 @@
 {
-    1: {
+    "1": {
         "Development Studies": {
             "Subtopics": [
                 "Impact of microfinance programs on rural poverty",
@@ -279,9 +279,51 @@
                 "Energy poverty and its socio-economic effects",
                 "Innovative financing for energy projects in low-income regions"
             ]
+        },
+        "Human Geography": {
+            "Subtopics": [
+                "Urban-rural disparities and access to resources",
+                "Land ownership and poverty",
+                "Spatial analysis of poverty distribution",
+                "Geographic impact of economic policies",
+                "Mobility and access to employment",
+                "Mapping and GIS in poverty reduction efforts",
+                "Rural geography and isolation issues",
+                "Impact of natural disasters on impoverished areas",
+                "Geographical aspects of informal economies",
+                "Spatial planning for equitable development"
+            ]
+        },
+        "Behavioral Economics": {
+            "Subtopics": [
+                "Decision-making processes in poverty conditions",
+                "Psychological impacts of financial scarcity",
+                "Behavioral interventions to improve economic outcomes",
+                "Nudging for better financial habits",
+                "Cognitive biases affecting low-income consumers",
+                "Impact of poverty on risk-taking and investment behaviors",
+                "Behavioral insights into savings and credit usage",
+                "Effectiveness of financial literacy programs",
+                "Behavioral barriers to escaping poverty",
+                "Psychological resilience and economic behavior"
+            ]
+        },
+        "Public Health": {
+            "Subtopics": [
+                "Relationships between poverty and chronic diseases",
+                "Preventive health care as an economic safeguard",
+                "Health disparities and social determinants of health",
+                "Impact of public health programs on poverty reduction",
+                "Accessibility and affordability of health care in impoverished areas",
+                "Epidemiological trends in low-income communities",
+                "Link between mental health and economic status",
+                "Effects of malnutrition on long-term economic productivity",
+                "Health education as a tool for poverty alleviation",
+                "Role of community health workers in impoverished settings"
+            ]
         }
     },
-    2: {
+    "2": {
         "Agricultural Economics & Policy": {
             "Subtopics": [
                 "Impact of agricultural subsidies on food security",
@@ -561,9 +603,52 @@
                 "Resource conservation strategies in food production",
                 "Economic analysis of biodiversity in agricultural systems"
             ]
+        },
+        "Public Health": {
+            "Subtopics": [
+                "Nutritional outcomes of food security initiatives",
+                "Health impacts of agricultural pesticides and chemicals",
+                "Epidemiological studies on malnutrition and related diseases",
+                "Public health strategies to enhance nutritional intake",
+                "Linkages between food security and global health pandemics",
+                "Obesity prevention through sustainable dietary practices",
+                "Health equity and access to nutritious food",
+                "Impacts of food deserts on public health",
+                "School health programs and child nutrition",
+                "Food safety standards and public health outcomes"
+            ]
+        },
+        "Climate Change Studies": {
+            "Subtopics": [
+                "Impact of climate change on global food production systems.",
+                "Health impacts of agricultural pesticides and chemicals.",
+                "Adaptation strategies for agriculture to cope with climate variability",
+                "Climate-induced changes in food and water security",
+                "Greenhouse gas emissions from agricultural practices",
+                "Resilience of food systems to extreme weather events",
+                "Role of agriculture in climate change mitigation",
+                "Carbon farming and its potential to improve food security",
+                "Climate-smart agricultural practices",
+                "Modeling future food production under climate scenarios",
+                "Policy responses to climate change impacts on agriculture"
+            ]
+        },
+        "Gender Studies": {
+            "Subtopics": [
+                "Role of women in achieving food security",
+                "Gender-specific barriers to accessing agricultural resources",
+                "Impact of food security on women's health and empowerment",
+                "Gender dynamics in agricultural labor and management",
+                "Women-led initiatives in sustainable agriculture",
+                "Gender-sensitive agricultural policies",
+                "Violence against women in rural agricultural settings",
+                "Empowerment through microfinance in agricultural contexts",
+                "Gender disparities in nutritional access and outcomes",
+                "Women's roles in traditional and modern agricultural practices"
+            ]
         }
     },
-    3: {
+    "3": {
         "Public, Environmental & Occupational Health": {
             "Subtopics": [
                 "Impact of air pollution on respiratory health",
@@ -843,9 +928,51 @@
                 "Community-based maternal health programs",
                 "Adolescent health challenges and solutions"
             ]
+        },
+        "Mental Health Studies": {
+            "Subtopics": [
+                "Prevalence and treatment of depression and anxiety globally",
+                "Impact of social isolation on mental health",
+                "Effectiveness of global mental health interventions",
+                "Integration of mental health into primary care",
+                "Mental health literacy and public education",
+                "Policies for the treatment and management of substance abuse",
+                "PTSD and its treatment in various populations",
+                "Mental health challenges in low-resource settings",
+                "Suicide prevention strategies and their effectiveness",
+                "Mental health in the workplace and organizational well-being"
+            ]
+        },
+        "Global Health Governance": {
+            "Subtopics": [
+                "Role of international health organizations in setting global standards",
+                "Coordination of global health initiatives and resource allocation",
+                "Impact of global health policies on national health outcomes",
+                "Health governance in handling pandemics",
+                "International health law and compliance",
+                "Financing models for global health initiatives",
+                "The effectiveness of global health campaigns",
+                "Ethical considerations in international health policy",
+                "Cross-country comparisons of health system performance",
+                "Role of diplomacy in global health strategy"
+            ]
+        },
+        "Health Economics": {
+            "Subtopics": [
+                "Economic impacts of public health issues",
+                "Cost-benefit analysis of health interventions",
+                "Health care financing and insurance models",
+                "Economic determinants of health inequalities",
+                "Fiscal policies and their impact on health care systems",
+                "Economic crises and health outcomes",
+                "Pricing models for pharmaceuticals",
+                "Health economic evaluation and decision making",
+                "Labor economics in the health care sector",
+                "Economic incentives in preventive health care"
+            ]
         }
     },
-    4: {
+    "4": {
         "Education & Educational Research": {
             "Subtopics": [
                 "Impact of universal access to education on socioeconomic outcomes",
@@ -1125,9 +1252,51 @@
                 "Mathematical modeling in education",
                 "Assessment and feedback in mathematics learning"
             ]
+        },
+        "Educational Sociology": {
+            "Subtopics": [
+                "The role of social norms in shaping educational aspirations",
+                "The impact of social stratification on access to education",
+                "Family and community influences on educational success",
+                "School as a social system and its dynamics",
+                "The sociology of education reform and policy change",
+                "Social barriers to education in disadvantaged communities",
+                "The impact of migration on education systems",
+                "Educational resilience in low-socioeconomic settings",
+                "Social theories of learning and knowledge reproduction",
+                "Cultural capital and its impact on student achievement"
+            ]
+        },
+        "Educational Economics": {
+            "Subtopics": [
+                "Cost-effectiveness of education interventions",
+                "Economic barriers to accessing education",
+                "The return on investment in different levels of education",
+                "Funding models and their impact on school quality",
+                "The economics of private versus public education",
+                "Labor market outcomes of various educational pathways",
+                "Economic impact of educational technology",
+                "Budget allocations and their effectiveness in education sectors",
+                "The role of education in economic development",
+                "Incentives and disincentives for educational advancement"
+            ]
+        },
+        "Digital Education and Online Learning": {
+            "Subtopics": [
+                "Efficacy of online vs. traditional education models",
+                "Barriers to and opportunities for e-learning in low-resource settings",
+                "The role of MOOCs in democratizing education",
+                "Adaptive learning technologies and personalized education",
+                "The digital divide and educational equity",
+                "Best practices for online pedagogy",
+                "Cybersecurity and privacy issues in digital education",
+                "Blended learning models and their implementation challenges",
+                "Impact of digital literacy on learning outcomes",
+                "Future trends in digital education tools and methods"
+            ]
         }
     },
-    5: {
+    "5": {
         "Gender Studies": {
             "Subtopics": [
                 "The impact of gender norms on economic opportunities",
@@ -1407,9 +1576,51 @@
                 "Urban spaces and gendered experiences",
                 "Technology and gender inclusivity in smart cities"
             ]
-        }
+        },
+        "Criminal Justice": {
+            "Subtopics": [
+                "Gender-specific crime rates and victimization",
+                "Impact of gender on sentencing outcomes",
+                "Gender differences in the criminal justice workforce",
+                "Programs for female offenders and gender-responsive interventions",
+                "Gender-based violence and legal protections",
+                "Trafficking and legal responses from a gender perspective",
+                "Domestic violence law enforcement and court responses",
+                "Sexual assault prevention and survivor support systems",
+                "Gender discrimination in legal systems",
+                "Rehabilitation and reintegration strategies for female prisoners"
+            ]
+        },
+        "Ethics and Gender": {
+            "Subtopics": [
+                "Ethical considerations in gender research",
+                "Gender equity in clinical trials and medical ethics",
+                "Bioethics and reproductive technologies",
+                "Ethical dilemmas in handling gender-based violence cases",
+                "Gender, privacy, and data protection in research",
+                "Ethical leadership and gender policies in organizations",
+                "Corporate ethics and gender equality",
+                "Ethical marketing and gender stereotypes",
+                "Social justice and ethical theories on gender equality",
+                "Ethics of care and its implications for gender studies"
+            ]
+        },
+        "Gender and Technology": {
+            "Subtopics": [
+                "Gender disparities in technology access and digital literacy",
+                "Women's participation in the tech industry and STEM fields",
+                "Impact of AI and machine learning on gender bias",
+                "Gender considerations in the design of technological products",
+                "Online harassment and gender-specific online behaviors",
+                "Technologies for enhancing women's health and well-being",
+                "The role of social media in gender activism and movements",
+                "E-commerce and its potential to empower women entrepreneurs",
+                "Gender-responsive technologies in agriculture and business",
+                "Blockchain and opportunities for gender-based initiatives"
+            ]
+        }   
     },
-    6: {
+    "6": {
         "Water Resources": {
             "Subtopics": [
                 "Sustainable water management practices",
@@ -1689,9 +1900,51 @@
                 "Use of biotechnology in flood management",
                 "Genomics and proteomics applications in water research"
             ]
+        },
+        "Water Law and Policy": {
+            "Subtopics": [
+                "International water law and transboundary water management",
+                "Water rights and legal disputes",
+                "Regulation and compliance in water quality management",
+                "Legal frameworks for water allocation and use efficiency",
+                "Water governance and institutional roles",
+                "Impact of legislation on water conservation efforts",
+                "Legal aspects of water market development",
+                "Environmental law impacting water resources",
+                "Legal tools for public participation in water management",
+                "Conflict resolution mechanisms in water disputes"
+            ]
+        },
+        "Water Economics": {
+            "Subtopics": [
+                "Economic impacts of water scarcity",
+                "Valuation and financing of water infrastructure projects",
+                "Cost-benefit analysis of water management strategies",
+                "Pricing policies and their impact on water use",
+                "Economic incentives for water conservation",
+                "Market-based instruments for water management",
+                "Economic resilience to water-related natural disasters",
+                "Public-private partnerships in the water sector",
+                "The role of water in economic development",
+                "Investment strategies in water technologies"
+            ]
+        },
+        "Cultural Studies in Water Management": {
+            "Subtopics": [
+                "Cultural perceptions of water usage and conservation",
+                "Social and cultural factors influencing water governance",
+                "Water in religious and traditional practices",
+                "Cultural impacts on water sanitation behaviors",
+                "Community engagement and cultural barriers in water projects",
+                "Indigenous knowledge systems in water management",
+                "Cultural dimensions of water conflicts",
+                "Water rituals and their environmental implications",
+                "Influence of cultural heritage on water conservation strategies",
+                "Education and cultural change for sustainable water use"
+            ]
         }
     },
-    7: {
+    "7": {
         "Energy & Fuels": {
             "Subtopics": [
                 "Innovations in biofuel production",
@@ -1971,9 +2224,51 @@
                 "Emergency preparedness in energy production facilities",
                 "Workplace health promotion in energy companies"
             ]
+        },
+        "Energy Security and Geopolitics": {
+            "Subtopics": [
+                "Geopolitical risks in international energy markets",
+                "Energy security as a factor in national security strategies",
+                "Impact of energy resource distribution on global politics",
+                "Energy trade policies and international relations",
+                "The role of multinational energy corporations in geopolitics",
+                "Conflicts and negotiations over transboundary energy resources",
+                "Political stability and energy resource exploitation",
+                "Strategic energy reserves and crisis management",
+                "Energy diplomacy and its tools (sanctions, agreements, collaborations)",
+                "The influence of global energy shifts on geopolitical balance"
+            ]
+        },
+        "Behavioral Science in Energy Use": {
+            "Subtopics": [
+                "Consumer behavior and energy consumption patterns",
+                "Psychological factors influencing energy conservation behaviors",
+                "Impact of societal norms on energy use practices",
+                "Behavioral interventions to promote energy efficiency",
+                "Public perceptions of renewable energy technologies",
+                "Influence of cultural factors on energy-saving measures",
+                "Social and behavioral aspects of transitioning to smart grids",
+                "Community-based social marketing for energy conservation",
+                "Behavioral economics in energy pricing and policy design",
+                "Adoption of new energy technologies and the role of social influence"
+            ]
+        },
+        "Energy Anthropology": {
+            "Subtopics": [
+                "Cultural dimensions of energy use and sustainability",
+                "Ethnographic studies on community energy practices",
+                "Traditional knowledge systems and their implications for sustainable energy",
+                "Anthropological perspectives on energy poverty",
+                "Social impacts of energy transitions on indigenous and rural communities",
+                "Cultural resistance to or acceptance of new energy technologies",
+                "Energy rituals and their symbolic meanings in different cultures",
+                "The role of belief systems in shaping energy policies",
+                "Community engagement in renewable energy projects",
+                "Socio-cultural barriers to energy efficiency initiatives"
+            ]
         }
     },
-    8: {
+    "8": {
         "Economics": {
             "Subtopics": [
                 "Macroeconomic policies for sustainable growth",
@@ -2253,9 +2548,51 @@
                 "Safety culture and economic performance",
                 "Legislation and economic aspects of occupational health"
             ]
+        },
+        "Economic Sociology": {
+            "Subtopics": [
+                "Social networks and economic outcomes",
+                "The role of culture in economic development",
+                "Social capital and its impact on economic resilience",
+                "The sociology of financial markets",
+                "Corporate social responsibility and social impact",
+                "Informal economy and its role in global economics",
+                "Social implications of economic crises",
+                "Labor market exclusions based on race, gender, and class",
+                "The impact of social policies on economic behaviors",
+                "Community and cooperative models of economic organization"
+            ]
+        },
+        "Behavioral Economics": {
+            "Subtopics": [
+                "Psychological factors influencing economic decisions",
+                "The impact of behavioral insights on policy effectiveness",
+                "Nudging for better financial and labor market outcomes",
+                "Behavioral barriers to saving and investment behaviors",
+                "The role of irrational behavior in economic crises",
+                "Behavioral interventions to improve worker productivity",
+                "Consumer behavior in digital marketplaces",
+                "Behavioral factors in economic disparities",
+                "The effect of financial literacy on economic participation",
+                "Decision-making processes under economic stress"
+            ]
+        },
+        "Economic Geography": {
+            "Subtopics": [
+                "Spatial analysis of economic activity and productivity",
+                "Geographic disparities in employment and infrastructure",
+                "Regional innovation systems and economic development",
+                "The role of urbanization in economic transformation",
+                "Rural-urban migration and its economic consequences",
+                "The impact of geographical factors on economic diversification",
+                "Location theories and the clustering of economic activities",
+                "Globalization’s impact on regional economies",
+                "The geography of economic crises and recovery",
+                "Land use planning and its influence on economic sectors"
+            ]
         }
     },
-    9: {
+    "9": {
         "Civil Engineering": {
             "Subtopics": [
                 "Resilient infrastructure design for natural disasters",
@@ -2535,9 +2872,51 @@
                 "Interdisciplinary research in science and technology",
                 "Role of government in technological advancements"
             ]
+        },
+        "Economic Development Studies": {
+            "Subtopics": [
+                "Role of infrastructure in regional economic development",
+                "Impact of industrialization on local economies",
+                "Economic theories related to industrial growth",
+                "Financing models for large-scale infrastructure projects",
+                "Economic resilience through diversified industrial bases",
+                "Development economics perspectives on industrial policy",
+                "The linkage between innovation and economic competitiveness",
+                "Impact of globalization on domestic industries",
+                "Strategies for developing economies to attract industrial investment",
+                "Economic integration and its effects on industrial sectors"
+            ]
+        },
+        "Sociotechnical Systems Studies": {
+            "Subtopics": [
+                "Interaction between technology and society in industrial contexts",
+                "Sociotechnical dynamics of innovation ecosystems",
+                "Impact of technological change on labor markets",
+                "Adoption of new technologies in traditional industries",
+                "Social aspects of sustainable industrial practices",
+                "Public perceptions and acceptance of new industrial technologies",
+                "Integration of social sciences in engineering education",
+                "Sociotechnical resilience in urban planning",
+                "Ethical implications of automated and smart systems",
+                "The role of human factors in industrial safety and ergonomics"
+            ]
+        },
+        "Global Supply Chain Management": {
+            "Subtopics": [
+                "Global logistics and supply chain strategies for sustainability",
+                "Impact of supply chain innovations on global trade",
+                "Risk management in international supply chains",
+                "Sustainability and ethics in supply chain practices",
+                "Supply chain integration of emerging markets",
+                "Digital transformation in supply chain management",
+                "The role of supply chains in circular economy models",
+                "Supply chain resilience to global disruptions (pandemics, conflicts)",
+                "Regulatory and policy challenges in global supply chains",
+                "Technological advancements in logistics and distribution"
+            ]
         }
     },
-    10: {
+    "10": {
         "Economics": {
             "Subtopics": [
                 "Economic policies to reduce income inequality",
@@ -2817,9 +3196,51 @@
                 "Ethical challenges in social work practice",
                 "Case management and social justice"
             ]
+        },
+        "Cultural Studies": {
+            "Subtopics": [
+                "Impact of cultural norms on economic and social inequality",
+                "Media representations of class and inequality",
+                "Cultural imperialism and global inequality",
+                "The role of language in perpetuating social divides",
+                "Cultural integration and its effects on reducing ethnic and racial disparities",
+                "Pop culture's influence on perceptions of inequality",
+                "Cultural identity and its economic implications",
+                "The impact of cultural exchange programs on social cohesion",
+                "Cultural heritage preservation and community development",
+                "The role of arts in addressing social and economic issues"
+            ]
+        },
+        "Behavioral Economics": {
+            "Subtopics": [
+                "How cognitive biases affect perceptions of inequality",
+                "The impact of psychological factors on economic decision-making",
+                "Behavioral barriers to redistributive policies",
+                "The role of behavioral nudges in promoting equality",
+                "Psychological impacts of income disparity",
+                "Behavioral interventions to enhance financial literacy and empowerment",
+                "The influence of social norms on economic behavior",
+                "Behavioral aspects of charitable giving and social welfare",
+                "Psychological effects of poverty and social exclusion",
+                "Motivational factors behind economic mobility"
+            ]
+        },
+        "Digital Inequality Studies": {
+            "Subtopics": [
+                "The digital divide and its impact on social inequality",
+                "Access to technology as a factor in educational and economic disparities",
+                "Role of information and communication technology in empowerment",
+                "Online platforms and economic inequality",
+                "Impact of social media on social mobilization and inequality",
+                "Cybersecurity issues and their disproportionate impact on marginalized groups",
+                "E-governance and its potential to reduce administrative inequalities",
+                "Digital literacy programs and their role in social inclusion",
+                "The future of work and digital skill disparities",
+                "Technology-driven solutions to address health disparities"
+            ]
         }
     },
-    11: {
+    "11": {
         "Urban Studies": {
             "Subtopics": [
                 "Urban resilience and climate adaptation strategies",
@@ -3099,9 +3520,51 @@
                 "Climate-adaptive landscape architecture",
                 "Landscape and urban biodiversity conservation"
             ]
+        },
+        "Public Health": {
+            "Subtopics": [
+                "Urban design and non-communicable diseases",
+                "Impact of green spaces on mental health",
+                "Public health infrastructure and accessibility",
+                "Urban density and its health implications",
+                "Strategies for pandemic preparedness in dense urban settings",
+                "Health disparities and access to medical services in urban areas",
+                "Effectiveness of urban health outreach programs",
+                "Relationship between air quality and public health outcomes",
+                "Health impacts of urban noise pollution",
+                "Designing healthy cities: integration of health into urban planning"
+            ]
+        },
+        "Anthropology": {
+            "Subtopics": [
+                "Social impacts of urban renewal on local communities",
+                "Cultural changes driven by urbanization",
+                "Anthropological perspectives on urban poverty and exclusion",
+                "Role of cultural heritage in contemporary urban settings",
+                "Migration patterns within urban contexts and their social implications",
+                "Ethnographic studies on urban communities and resilience",
+                "Identity and space in multicultural urban settings",
+                "Traditions and modern urban lifestyles",
+                "Community rituals and urban spaces",
+                "Social cohesion in high-density living environments"
+            ]
+        },
+        "Technology and Innovation Studies": {
+            "Subtopics": [
+                "Role of emerging technologies in shaping sustainable urban futures",
+                "Innovation ecosystems in urban development",
+                "Technology-driven urban mobility solutions",
+                "Smart technologies and their impact on urban efficiency",
+                "Blockchain for urban governance and transparency",
+                "Urban big data and analytics for city management",
+                "The impact of digital inclusivity on urban development",
+                "Technologies in urban waste management and recycling",
+                "Innovation in urban water systems",
+                "Technological strategies for reducing urban energy consumption"
+            ]
         }
     },
-    12: {
+    "12": {
         "Environmental Science": {
             "Subtopics": [
                 "Impact of consumer habits on natural ecosystems",
@@ -3381,9 +3844,51 @@
                 "Impact of transport on land use and habitat disruption",
                 "Sustainable aviation and maritime transport solutions"
             ]
+        },
+        "Biotechnology": {
+            "Subtopics": [
+                "Biotechnological innovations in waste reduction",
+                "Enzymatic recycling processes for plastics",
+                "Bioremediation of contaminated sites",
+                "GMOs for sustainable agriculture",
+                "Bio-based materials and their lifecycle impacts",
+                "Microbial treatments for organic waste",
+                "Biotechnological advances in water purification",
+                "Role of biotechnology in sustainable food production",
+                "Genetic engineering for enhanced resource efficiency",
+                "Biofuels and their role in sustainable energy solutions"
+            ]
+        },
+        "Psychology": {
+            "Subtopics": [
+                "Psychological drivers behind unsustainable consumption",
+                "Behavioral interventions to promote sustainable habits",
+                "Impact of societal norms on consumption patterns",
+                "Psychological effects of living in a high-consumption society",
+                "Strategies for changing public attitudes towards sustainability",
+                "Consumer psychology in the choice of sustainable products",
+                "Mental health benefits of sustainable living environments",
+                "Role of psychological well-being in sustainable lifestyle choices",
+                "Community psychology and local sustainability initiatives",
+                "Psychological barriers to adopting green technologies"
+            ]
+        },
+        "Philosophy and Ethics": {
+            "Subtopics": [
+                "Ethical considerations in consumption and production",
+                "Philosophical underpinnings of sustainability",
+                "Ethics of resource use and intergenerational justice",
+                "Moral implications of consumer culture",
+                "Ethical debates on global resource allocation",
+                "Sustainability ethics and corporate responsibility",
+                "Philosophical perspectives on the human-nature relationship",
+                "Ethics of conservation and biodiversity",
+                "Role of moral education in promoting sustainable practices",
+                "Ethical consumerism and global equity"
+            ]
         }
     },
-    13: {
+    "13": {
         "Environmental Science": {
             "Subtopics": [
                 "Impact of climate change on global ecosystems",
@@ -3663,9 +4168,51 @@
                 "Heatwaves and public health interventions",
                 "Climate impacts on food security and nutrition"
             ]
+        },
+        "Behavioral Science": {
+            "Subtopics": [
+                "Psychological impacts of climate change on individuals and communities",
+                "Behavioral barriers to adopting sustainable practices",
+                "Motivational strategies for climate action engagement",
+                "Influence of climate change beliefs on policy support",
+                "Social norms and their role in energy consumption",
+                "Public perception and response to climate risks",
+                "Behavioral incentives for reducing carbon footprints",
+                "Communication strategies to enhance climate literacy",
+                "Psychological resilience in facing climate disasters",
+                "Impact of climate anxiety on societal well-being"
+            ]
+        },
+        "Information Technology": {
+            "Subtopics": [
+                "Development of technologies for better climate data collection",
+                "Use of big data and AI in climate modeling and forecasting",
+                "Innovations in climate informatics for decision support systems",
+                "IT solutions for energy efficiency and management",
+                "Blockchain for transparency in carbon trading",
+                "Smart technologies in managing climate adaptation infrastructure",
+                "Cybersecurity challenges in climate-related data systems",
+                "Role of social media in climate awareness and action",
+                "Digital platforms for community-based climate resilience",
+                "Technological advancements in remote sensing for environmental monitoring"
+            ]
+        },
+        "Global Health": {
+            "Subtopics": [
+                "Global health governance in the face of climate change",
+                "Impact of climate change on global infectious disease patterns",
+                "Health system resilience to climate-induced natural disasters",
+                "Climate change and global health equity issues",
+                "Strategies for protecting health during heatwaves and extreme events",
+                "Role of global health organizations in climate-related health issues",
+                "Interconnections between climate change and global pandemics",
+                "Health co-benefits of climate mitigation policies",
+                "Global strategies for climate change health impact assessments",
+                "Climate change and its effects on global nutrition and food security"
+            ]
         }
     },
-    14: {
+    "14": {
         "Oceanography": {
             "Subtopics": [
                 "Ocean acidification and its impacts on marine ecosystems",
@@ -3945,9 +4492,51 @@
                 "Autonomous marine vehicles and their ecological implications",
                 "Safety and environmental regulations in maritime transportation"
             ]
+        },
+        "Biotechnology": {
+            "Subtopics": [
+                "Genetic engineering for coral restoration",
+                "Biotechnological advancements in marine biomass utilization",
+                "Development of bio-based materials from marine sources",
+                "Marine organisms in bioremediation of pollutants",
+                "Bioinformatics applications in marine species conservation",
+                "Synthetic biology for improving marine organism resilience",
+                "Biotechnological methods for monitoring marine environments",
+                "Applications of CRISPR in marine genetic research",
+                "Marine algae as biofuel sources",
+                "Innovations in marine bioproducts for pharmaceuticals"
+            ]
+        },
+        "Human Geography": {
+            "Subtopics": [
+                "Socio-economic impacts of marine conservation areas",
+                "Human geography of coastal communities",
+                "Geographic patterns of marine resource exploitation",
+                "Impacts of tourism on marine environments",
+                "Land-sea interaction and human settlements",
+                "Planning and geography of marine protected areas",
+                "Coastal migrations due to sea-level rise",
+                "Human spatial dynamics in maritime zones",
+                "Geographic distribution of marine pollution sources",
+                "Cultural and historical maritime landscapes"
+            ]
+        },
+        "Marine Anthropology": {
+            "Subtopics": [
+                "Cultural significance of marine biodiversity",
+                "Anthropological perspectives on marine conservation",
+                "Indigenous knowledge systems and marine management",
+                "Human-sea relationships in historical contexts",
+                "Social impacts of changing marine ecosystems",
+                "Cultural practices affecting marine sustainability",
+                "Anthropology of fishing communities",
+                "Rituals and marine resource use",
+                "Socio-cultural drivers of marine resource depletion",
+                "Ethnographic studies of marine governance"
+            ]
         }
     },
-    15: {
+    "15": {
         "Ecology": {
             "Subtopics": [
                 "Ecosystem resilience and climate adaptation",
@@ -4227,9 +4816,51 @@
                 "Water quality monitoring and restoration",
                 "Impact of climate change on water resource availability"
             ]
+        },
+        "Anthropology": {
+            "Subtopics": [
+                "Cultural practices influencing land use and conservation",
+                "Anthropological perspectives on human-wildlife conflicts",
+                "Indigenous knowledge systems in ecosystem management",
+                "Social impacts of land degradation on indigenous communities",
+                "Cultural valuation of ecosystem services",
+                "Ethnobotanical studies on plant use for sustainable livelihoods",
+                "Anthropogenic factors in habitat destruction and conservation",
+                "Community-based conservation strategies and their effectiveness",
+                "Rituals and their roles in conservation practices",
+                "Land rights and conflicts from an anthropological viewpoint"
+            ]
+        },
+        "Psychology": {
+            "Subtopics": [
+                "Behavioral responses to biodiversity conservation programs",
+                "Psychological impacts of environmental degradation",
+                "Community attitudes towards wildlife conservation",
+                "Motivations for participation in land restoration activities",
+                "Psychological benefits of interaction with nature",
+                "Conservation psychology: strategies for enhancing public engagement",
+                "Impact of ecological grief and anxiety on conservation actions",
+                "Behavior change interventions for sustainable land practices",
+                "Social identity and its influence on environmental stewardship",
+                "Psychological drivers for illegal exploitation of natural resources"
+            ]
+        },
+        "Urban Planning": {
+            "Subtopics": [
+                "Integration of green spaces in urban planning",
+                "Urban sprawl and its impact on surrounding ecosystems",
+                "Planning for biodiversity in city environments",
+                "Sustainable land use in urban settings",
+                "Urban agriculture and its role in sustainable urban ecosystems",
+                "Strategies for reducing heat islands through city planning",
+                "Urban water management and its impacts on terrestrial habitats",
+                "Planning policies to mitigate urban impacts on natural landscapes",
+                "Infrastructure development and wildlife corridors",
+                "Zoning laws and their enforcement to protect natural areas"
+            ]
         }
     },
-    16: {
+    "16": {
         "Political Science": {
             "Subtopics": [
                 "Governance models and democratic stability",
@@ -4509,9 +5140,51 @@
                 "Communication technologies in crisis management",
                 "Media training for conflict-sensitive reporting"
             ]
+        },
+        "Ethnic Studies": {
+            "Subtopics": [
+                "Ethnic and racial conflicts and resolution strategies",
+                "Role of ethnic identity in political and social integration",
+                "Historical injustices and their contemporary impacts",
+                "Ethnic diversity and policy making",
+                "Discrimination and xenophobia in multicultural societies",
+                "Cultural preservation within governance frameworks",
+                "Intersectionality in social justice and policy",
+                "Migration and ethnic diasporas",
+                "Ethnic minorities and access to public services",
+                "Ethnonationalism and its implications for peace"
+            ]
+        },
+        "Health Policy": {
+            "Subtopics": [
+                "Impact of public health policies on social stability",
+                "Mental health initiatives as part of community peacebuilding",
+                "Access to healthcare in conflict zones",
+                "Health inequalities as social determinants of peace",
+                "Role of health diplomacy in international relations",
+                "Health systems resilience in post-conflict recovery",
+                "Impact of violence on public health",
+                "Health sector corruption and reforms",
+                "Biopolitics and state control through health measures",
+                "Pandemic response and implications for civil liberties"
+            ]
+        },
+        "Digital Ethics and Governance": {
+            "Subtopics": [
+                "Digital rights and freedom of expression",
+                "Cybersecurity policies and individual privacy",
+                "Governance of artificial intelligence and social implications",
+                "Ethical hacking and its role in maintaining digital peace",
+                "Digital surveillance and human rights",
+                "Regulation of digital content and hate speech",
+                "Blockchain for transparency in governance",
+                "Digital inclusivity and access to information",
+                "Impact of digital divides on social equality",
+                "Role of social media platforms in democracy and governance"
+            ]
         }
     },
-    17: {
+    "17": {
         "International Relations": {
             "Subtopics": [
                 "Diplomacy and international cooperation for sustainable development",
@@ -4791,6 +5464,48 @@
                 "Socio-technical systems and sustainability",
                 "Science communication in a global context"
             ]
-        }
+        },
+        "Technology and Innovation Studies": {
+            "Subtopics": [
+                "Emerging technologies for sustainable development",
+                "Role of innovation ecosystems in enhancing global partnerships",
+                "Technology transfer and intellectual property issues",
+                "Innovation in governance and public administration",
+                "Collaborative technologies for enhancing transparency and accountability",
+                "Scaling up technology solutions for global challenges",
+                "Impact of digital transformation on sustainable practices",
+                "Innovation policy and international cooperation",
+                "Challenges and opportunities in tech-driven development models",
+                "Role of startups and SMEs in technology for development"
+            ]
+        },
+        "Philanthropy and Non-profit Studies": {
+            "Subtopics": [
+                "Trends and impacts of global philanthropy on development",
+                "Role of non-profits in advancing SDGs",
+                "Partnership models between private foundations and public sectors",
+                "Accountability and transparency in non-profit management",
+                "Innovative funding models for sustainability projects",
+                "Impact measurement in philanthropic initiatives",
+                "Non-profits and advocacy for policy change",
+                "Community engagement strategies in non-profit projects",
+                "Legal frameworks governing international non-profit operations",
+                "Capacity building and resource management in the non-profit sector"
+            ]
+        },
+        "Trade and Development Studies": {
+            "Subtopics": [
+                "Global trade networks and sustainable development",
+                "Trade barriers and their impact on sustainable practices",
+                "Role of international trade in promoting economic inclusivity",
+                "Impact of global supply chains on achieving SDGs",
+                "Trade agreements and environmental sustainability",
+                "Developing countries in the global trade system",
+                "Fair trade practices and development",
+                "Trade-related aspects of intellectual property rights",
+                "Effects of globalization on local industries",
+                "Trade facilitation and regional cooperation"
+            ]
+        }        
     }
 }
