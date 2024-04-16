@@ -7,14 +7,12 @@ import json
 import random
 
 from typing import Any
-from synthetic_data.utils import load_attributes
-from essentials.utils import (
-    load_env_variable,
+from synthetic_data.utils import (
+    load_attributes,
     init_default_parser
 )
-from essentials.data_functions import (
-    read_data
-)
+from essentials.utils import load_env_variable
+from essentials.data_functions import read_data
 from essentials.config import (
     ABSTRACTS,
     GOALS
@@ -122,8 +120,12 @@ def construct_prompts_from_attributes(
     )
 
 
-def clean_str(string):
+def clean_str(string: str) -> str:
     """Cleans model output."""
+    splits = string.split('Abstract')
+    if len(splits) == 2:
+        # Only use the actual abstract text
+        string = splits[-1]
     string = re.sub(r"[^A-Za-z0-9(),.!?\"\']", " ", string)
     string = re.sub(r"\s{2,}", " ", string)
     return string.strip()
@@ -286,15 +288,15 @@ def main(args):
                 # Handel error cases
                 except openai.RateLimitError:
                     print("Rate Limit Error! Attempt:", attempts)
-                    time.sleep(10)
+                    time.sleep(30)
 
                 except openai.APIConnectionError:
                     print("APIConnectionError! Attempt:", attempts)
-                    time.sleep(5)
+                    time.sleep(10)
 
                 except openai.APIError as e:
                     print(f"API Error! {e} Attempt:", attempts)
-                    time.sleep(5)
+                    time.sleep(10)
 
                 finally:
                     attempts += 1
