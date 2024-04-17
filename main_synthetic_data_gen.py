@@ -178,14 +178,23 @@ async def dispatch_openai_requests(
     return await asyncio.gather(*async_responses)
 
 
-def call_api_async(client, msg_lst, model, temperature, max_tokens, top_p):
+def call_api_async(
+    client,
+    messages_list: list[list[dict[str, Any]]],
+    model: str,
+    temperature: float,
+    max_tokens: int,
+    top_p: float,
+    loop: asyncio.AbstractEventLoop
+) -> list[str]:
+    """Asynchronous API calling function using an explicit loop."""
     print("===================================")
-    print(f"call APIs, {len(msg_lst)} in total, temp={temperature}.")
+    print(f"call APIs, {len(messages_list)} in total, temp={temperature}.")
 
-    response = asyncio.run(
+    response = loop.run_until_complete(
         dispatch_openai_requests(
             client,
-            messages_list=msg_lst,
+            messages_list=messages_list,
             model=model,
             temperature=temperature,
             max_tokens=max_tokens,
@@ -226,6 +235,10 @@ def main(args):
     # Create attribute dictionary with choices for random sampling
     attr_dict = {attr: process_attributes(attr) for attr in args.attributes}
 
+    # Prepare for asynchronous operations
+    loop = asyncio.new_event_loop()
+    asyncio.set_event_loop(loop)
+
     # Produce examples for each sdg goal
     for sdg_id in sdg_ids:
 
@@ -258,7 +271,8 @@ def main(args):
                         args.model_name,
                         args.temperature,
                         args.max_tokens,
-                        args.top_p
+                        args.top_p,
+                        loop
                     )
 
                     # Check if for every uid a model output was returned
@@ -300,6 +314,8 @@ def main(args):
 
                 finally:
                     attempts += 1
+
+    loop.close()
 
 
 if __name__ == '__main__':
