@@ -160,4 +160,4 @@ cython_debug/
 #.idea/
 
 # ML Models
-.safetensors
+*.safetensors
