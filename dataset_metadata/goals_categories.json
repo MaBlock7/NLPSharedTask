@@ -1,0 +1,516 @@
+{
+   "0": {
+      "03 Faculty of Economics": {
+         "Department of Informatics": {},
+         "Department of Business Administration": {},
+         "Department of Banking and Finance": {},
+         "Center for Corporate Responsibility and Sustainability": {},
+         "Department of Economics": {},
+         "UBS Center for Economics in Society": {}
+      },
+      "07 Faculty of Science": {
+         "Institute of Molecular Cancer Research": {},
+         "Department of Evolutionary Anthropology": {},
+         "Zurich-Basel Plant Science Center": {},
+         "Department of Chemistry": {},
+         "Institute of Geography": {},
+         "Institute of Molecular Life Sciences": {},
+         "Physics Institute": {},
+         "Department of Systematic and Evolutionary Botany": {},
+         "Institute of Mathematics": {},
+         "Department of Plant and Microbial Biology": {},
+         "Institute of Pharmacology and Toxicology": {},
+         "Institute for Computational Science": {},
+         "Institute of Evolutionary Biology and Environmental Studies": {}
+      },
+      "06 Faculty of Arts": {
+         "Institute of Sociology": {},
+         "Linguistic Research Infrastructure (LiRI)": {},
+         "Institute of Psychology": {},
+         "English Department": {},
+         "Department of Communication and Media Research": {},
+         "Institute of Archaeology": {},
+         "Jacobs Center for Productive Youth Development": {},
+         "Institute of Slavonic Studies": {},
+         "Institute of Computational Linguistics": {},
+         "Institute of Philosophy": {},
+         "Zurich Center for Linguistics": {},
+         "Institute of Political Science": {},
+         "Institute of Romance Studies": {}
+      },
+      "08 Research Priority Programs": {
+         "Digital Society Initiative": {},
+         "Language and Space": {},
+         "Dynamics of Healthy Aging": {},
+         "Evolution in Action: From Genomes to Ecosystems": {},
+         "Global Change and Biodiversity": {},
+         "Digital Religion(s)": {}
+      },
+      "04 Faculty of Medicine": {
+         "Psychiatric University Hospital Zurich": {
+            "Clinic for Psychiatry, Psychotherapy, and Psychosomatics": {},
+            "Department of Child and Adolescent Psychiatry": {}
+         },
+         "Institute of Medical Virology": {},
+         "Institute of Pharmacology and Toxicology": {},
+         "Institute of Molecular Cancer Research": {},
+         "Institute of Biomedical Engineering": {},
+         "University Children's Hospital Zurich": {
+            "Medical Clinic": {}
+         },
+         "University Hospital Zurich": {
+            "Clinic for Otorhinolaryngology": {},
+            "Institute of General Practice": {}
+         },
+         "Institute of Parasitology": {},
+         "Epidemiology, Biostatistics and Prevention Institute (EBPI)": {},
+         "Zurich Center for Integrative Human Physiology (ZIHP)": {},
+         "Functional Genomics Center Zurich": {},
+         "Institute of Experimental Immunology": {},
+         "Neuroscience Center Zurich": {}
+      },
+      "01 Faculty of Theology and the Study of Religion": {
+         "Center for Ethics": {}
+      },
+      "Working Paper Series": {
+         "Department of Economics": {},
+         "UBS Center Working Paper Series": {},
+         "UBS Center Public Paper Series": {}
+      },
+      "05 Vetsuisse Faculty": {
+         "Veterin\u00e4rwissenschaftliches Institut": {
+            "Institute of Food Safety and Hygiene": {},
+            "Institute of Parasitology": {},
+            "Institute of Virology": {},
+            "Institute of Veterinary Pharmacology and Toxicology": {},
+            "Chair in Veterinary Epidemiology": {},
+            "Institute of Veterinary Physiology": {}
+         },
+         "Veterinary Clinic": {
+            "Department of Farm Animals": {},
+            "Department of Small Animals": {}
+         }
+      },
+      "National licences": {
+         "142-005": {}
+      },
+      "370 Education": {},
+      "170 Ethics": {},
+      "450 Italian, Romanian & related languages": {},
+      "610 Medicine & health": {},
+      "510 Mathematics": {},
+      "100 Philosophy": {},
+      "470 Latin & Italic languages": {},
+      "540 Chemistry": {},
+      "460 Spanish & Portuguese languages": {},
+      "320 Political science": {},
+      "300 Social sciences, sociology & anthropology": {},
+      "910 Geography & travel": {},
+      "410 Linguistics": {},
+      "150 Psychology": {},
+      "330 Economics": {},
+      "580 Plants (Botany)": {},
+      "000 Computer science, knowledge & systems": {},
+      "590 Animals (Zoology)": {},
+      "530 Physics": {},
+      "400 Language": {},
+      "440 French & related languages": {},
+      "570 Life sciences; biology": {},
+      "070 News media, journalism & publishing": {},
+      "820 English & Old English literatures": {},
+      "630 Agriculture": {},
+      "900 History": {},
+      "800 Literature, rhetoric & criticism": {},
+      "490 Other languages": {}
+   },
+   "1": {
+      "08 Research Priority Programs": {
+         "Asia and Europe": {}
+      },
+      "07 Faculty of Science": {
+         "Institute of Geography": {}
+      },
+      "03 Faculty of Economics": {
+         "Department of Economics": {},
+         "Department of Banking and Finance": {}
+      },
+      "910 Geography & travel": {},
+      "180 Ancient, medieval & eastern philosophy": {},
+      "950 History of Asia": {},
+      "330 Economics": {}
+   },
+   "2": {
+      "05 Vetsuisse Faculty": {
+         "Veterin\u00e4rwissenschaftliches Institut": {
+            "Institute of Food Safety and Hygiene": {}
+         }
+      },
+      "07 Faculty of Science": {
+         "Department of Plant and Microbial Biology": {},
+         "Department of Chemistry": {},
+         "Institute of Geography": {},
+         "Institute of Evolutionary Biology and Environmental Studies": {}
+      },
+      "04 Faculty of Medicine": {
+         "Institute of Evolutionary Medicine": {}
+      },
+      "03 Faculty of Economics": {
+         "Department of Economics": {},
+         "Department of Banking and Finance": {}
+      },
+      "540 Chemistry": {},
+      "570 Life sciences; biology": {},
+      "580 Plants (Botany)": {},
+      "330 Economics": {},
+      "590 Animals (Zoology)": {},
+      "910 Geography & travel": {},
+      "610 Medicine & health": {}
+   },
+   "3": {
+      "05 Vetsuisse Faculty": {
+         "Veterin\u00e4rwissenschaftliches Institut": {
+            "Institute of Food Safety and Hygiene": {},
+            "Chair in Veterinary Epidemiology": {}
+         }
+      },
+      "04 Faculty of Medicine": {
+         "University Children's Hospital Zurich": {
+            "Medical Clinic": {}
+         },
+         "Institute of Evolutionary Medicine": {},
+         "Functional Genomics Center Zurich": {},
+         "Institute of Medical Virology": {},
+         "Swiss Institute of Allergy and Asthma Research": {},
+         "Epidemiology, Biostatistics and Prevention Institute (EBPI)": {}
+      },
+      "06 Faculty of Arts": {
+         "Institute of Political Science": {}
+      },
+      "03 Faculty of Economics": {
+         "Department of Economics": {}
+      },
+      "570 Life sciences; biology": {},
+      "610 Medicine & health": {},
+      "330 Economics": {},
+      "320 Political science": {}
+   },
+   "4": {
+      "06 Faculty of Arts": {
+         "Jacobs Center for Productive Youth Development": {},
+         "Institute of Education": {}
+      },
+      "03 Faculty of Economics": {
+         "Department of Economics": {},
+         "Department of Business Administration": {}
+      },
+      "370 Education": {},
+      "330 Economics": {}
+   },
+   "5": {
+      "06 Faculty of Arts": {
+         "Institute of Sociology": {}
+      },
+      "03 Faculty of Economics": {
+         "UBS Center for Economics in Society": {},
+         "Department of Economics": {},
+         "Department of Business Administration": {},
+         "Department of Banking and Finance": {}
+      },
+      "300 Social sciences, sociology & anthropology": {},
+      "330 Economics": {}
+   },
+   "6": {
+      "06 Faculty of Arts": {
+         "Institute of Psychology": {}
+      },
+      "07 Faculty of Science": {
+         "Department of Plant and Microbial Biology": {},
+         "Institute of Evolutionary Biology and Environmental Studies": {},
+         "Department of Chemistry": {}
+      },
+      "540 Chemistry": {},
+      "570 Life sciences; biology": {},
+      "150 Psychology": {},
+      "580 Plants (Botany)": {},
+      "590 Animals (Zoology)": {}
+   },
+   "7": {
+      "03 Faculty of Economics": {
+         "Department of Informatics": {},
+         "Department of Banking and Finance": {}
+      },
+      "08 Research Priority Programs": {
+         "Solar Light to Chemical Energy Conversion": {}
+      },
+      "07 Faculty of Science": {
+         "Department of Chemistry": {}
+      },
+      "540 Chemistry": {},
+      "000 Computer science, knowledge & systems": {},
+      "330 Economics": {}
+   },
+   "8": {
+      "02 Faculty of Law": {
+         "Bereich Dekan: Fachgr. & Lehrst\u00fchle": {
+            "Constitutional, Administrative and International Law": {}
+         }
+      },
+      "06 Faculty of Arts": {
+         "Institute of Political Science": {},
+         "Department of Communication and Media Research": {}
+      },
+      "03 Faculty of Economics": {
+         "Department of Economics": {},
+         "Department of Banking and Finance": {}
+      },
+      "07 Faculty of Science": {
+         "Institute of Geography": {}
+      },
+      "08 Research Priority Programs": {
+         "Asia and Europe": {}
+      },
+      "Working Paper Series": {
+         "Department of Economics": {}
+      },
+      "320 Political science": {},
+      "070 News media, journalism & publishing": {},
+      "330 Economics": {},
+      "910 Geography & travel": {},
+      "340 Law": {}
+   },
+   "9": {
+      "03 Faculty of Economics": {
+         "Department of Informatics": {},
+         "Department of Economics": {},
+         "Department of Business Administration": {}
+      },
+      "Working Paper Series": {
+         "i-call Working Paper Series": {}
+      },
+      "02 Faculty of Law": {
+         "Bereich Dekan: Fachgr. & Lehrst\u00fchle": {
+            "Basic Subjects": {}
+         }
+      },
+      "340 Law": {},
+      "000 Computer science, knowledge & systems": {},
+      "330 Economics": {}
+   },
+   "10": {
+      "06 Faculty of Arts": {
+         "Institute of Sociology": {},
+         "Institute of Philosophy": {},
+         "Institute of Political Science": {},
+         "Institute of Education": {},
+         "Department of Communication and Media Research": {}
+      },
+      "03 Faculty of Economics": {
+         "Department of Economics": {},
+         "Department of Business Administration": {},
+         "Department of Banking and Finance": {}
+      },
+      "08 Research Priority Programs": {
+         "Social Networks": {}
+      },
+      "07 Faculty of Science": {
+         "Institute of Geography": {}
+      },
+      "01 Faculty of Theology and the Study of Religion": {
+         "Center for Ethics": {}
+      },
+      "Working Paper Series": {
+         "Department of Economics": {}
+      },
+      "370 Education": {},
+      "070 News media, journalism & publishing": {},
+      "300 Social sciences, sociology & anthropology": {},
+      "330 Economics": {},
+      "320 Political science": {},
+      "910 Geography & travel": {},
+      "100 Philosophy": {}
+   },
+   "11": {
+      "06 Faculty of Arts": {
+         "Institute of Psychology": {}
+      },
+      "07 Faculty of Science": {
+         "Institute of Geography": {},
+         "Institute of Evolutionary Biology and Environmental Studies": {}
+      },
+      "910 Geography & travel": {},
+      "150 Psychology": {},
+      "570 Life sciences; biology": {},
+      "590 Animals (Zoology)": {}
+   },
+   "12": {
+      "03 Faculty of Economics": {
+         "Department of Informatics": {},
+         "UBS Center for Economics in Society": {},
+         "Department of Economics": {},
+         "Department of Business Administration": {},
+         "Department of Banking and Finance": {}
+      },
+      "06 Faculty of Arts": {
+         "Institute of Sociology": {},
+         "Department of Social Anthropology and Cultural Studies": {},
+         "Department of Communication and Media Research": {}
+      },
+      "07 Faculty of Science": {
+         "Department of Chemistry": {}
+      },
+      "08 Research Priority Programs": {
+         "Ethics": {}
+      },
+      "01 Faculty of Theology and the Study of Religion": {
+         "Center for Ethics": {}
+      },
+      "Working Paper Series": {
+         "Department of Economics": {}
+      },
+      "540 Chemistry": {},
+      "170 Ethics": {},
+      "070 News media, journalism & publishing": {},
+      "330 Economics": {},
+      "300 Social sciences, sociology & anthropology": {},
+      "390 Customs, etiquette & folklore": {},
+      "000 Computer science, knowledge & systems": {}
+   },
+   "13": {
+      "06 Faculty of Arts": {
+         "Institute of Political Science": {},
+         "Institute of Psychology": {},
+         "Department of Communication and Media Research": {}
+      },
+      "07 Faculty of Science": {
+         "Department of Plant and Microbial Biology": {},
+         "Department of Chemistry": {},
+         "Institute for Computational Science": {},
+         "Institute of Geography": {},
+         "Department of Systematic and Evolutionary Botany": {},
+         "Institute of Evolutionary Biology and Environmental Studies": {},
+         "Institute of Mathematics": {}
+      },
+      "03 Faculty of Economics": {
+         "Department of Economics": {},
+         "Department of Banking and Finance": {}
+      },
+      "08 Research Priority Programs": {
+         "Global Change and Biodiversity": {}
+      },
+      "540 Chemistry": {},
+      "570 Life sciences; biology": {},
+      "150 Psychology": {},
+      "320 Political science": {},
+      "070 News media, journalism & publishing": {},
+      "330 Economics": {},
+      "580 Plants (Botany)": {},
+      "590 Animals (Zoology)": {},
+      "910 Geography & travel": {},
+      "510 Mathematics": {}
+   },
+   "14": {
+      "07 Faculty of Science": {
+         "Institute of Evolutionary Biology and Environmental Studies": {}
+      },
+      "570 Life sciences; biology": {},
+      "590 Animals (Zoology)": {}
+   },
+   "15": {
+      "06 Faculty of Arts": {
+         "Institute of Philosophy": {},
+         "Institute of Asian and Oriental Studies": {}
+      },
+      "07 Faculty of Science": {
+         "Zurich-Basel Plant Science Center": {},
+         "Department of Chemistry": {},
+         "Institute for Computational Science": {},
+         "Department of Paleontology": {},
+         "Institute of Geography": {},
+         "Department of Systematic and Evolutionary Botany": {},
+         "Institute of Evolutionary Biology and Environmental Studies": {},
+         "Institute of Mathematics": {}
+      },
+      "05 Vetsuisse Faculty": {
+         "Veterinary Clinic": {
+            "Department of Small Animals": {}
+         }
+      },
+      "01 Faculty of Theology and the Study of Religion": {
+         "Center for Ethics": {}
+      },
+      "08 Research Priority Programs": {
+         "Global Change and Biodiversity": {},
+         "Asia and Europe": {}
+      },
+      "540 Chemistry": {},
+      "290 Other religions": {},
+      "570 Life sciences; biology": {},
+      "560 Fossils & prehistoric life": {},
+      "580 Plants (Botany)": {},
+      "180 Ancient, medieval & eastern philosophy": {},
+      "630 Agriculture": {},
+      "590 Animals (Zoology)": {},
+      "910 Geography & travel": {},
+      "510 Mathematics": {}
+   },
+   "16": {
+      "04 Faculty of Medicine": {
+         "Psychiatric University Hospital Zurich": {
+            "Clinic for Psychiatry, Psychotherapy, and Psychosomatics": {},
+            "Department of Child and Adolescent Psychiatry": {}
+         },
+         "University Children's Hospital Zurich": {
+            "Medical Clinic": {}
+         }
+      },
+      "06 Faculty of Arts": {
+         "Institute of Sociology": {},
+         "Institute of Philosophy": {},
+         "Institute of Political Science": {},
+         "Institute of Psychology": {},
+         "Jacobs Center for Productive Youth Development": {},
+         "English Department": {},
+         "Department of Communication and Media Research": {}
+      },
+      "08 Research Priority Programs": {
+         "Dynamics of Healthy Aging": {},
+         "Social Networks": {}
+      },
+      "02 Faculty of Law": {
+         "Bereich Dekan: Fachgr. & Lehrst\u00fchle": {
+            "Constitutional, Administrative and International Law": {},
+            "Basic Subjects": {}
+         }
+      },
+      "03 Faculty of Economics": {
+         "Department of Economics": {},
+         "Department of Business Administration": {}
+      },
+      "07 Faculty of Science": {
+         "Institute of Geography": {}
+      },
+      "Working Paper Series": {
+         "i-call Working Paper Series": {}
+      },
+      "370 Education": {},
+      "150 Psychology": {},
+      "320 Political science": {},
+      "330 Economics": {},
+      "300 Social sciences, sociology & anthropology": {},
+      "070 News media, journalism & publishing": {},
+      "820 English & Old English literatures": {},
+      "910 Geography & travel": {},
+      "100 Philosophy": {},
+      "340 Law": {}
+   },
+   "17": {
+      "03 Faculty of Economics": {
+         "Department of Economics": {}
+      },
+      "06 Faculty of Arts": {
+         "Institute of Political Science": {}
+      },
+      "320 Political science": {},
+      "330 Economics": {}
+   }
+}
