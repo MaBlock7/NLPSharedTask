@@ -22,7 +22,25 @@ from essentials.config import (
 
 # Data paths
 SUBTOPICS = "synthetic_data/raw_data/attributes/subtopics/subtopics_new.json"
-
+SAMPLE_DICT = {
+    1: 0,    # 745
+    2: 0,    # 758
+    3: 0,    # 767
+    4: 0,    # 754
+    5: 0,    # 725
+    6: 0,    # 648
+    7: 0,    # 742
+    8: 0,    # 769
+    9: 0,    # 765
+    10: 0,   # 732
+    11: 0,   # 779
+    12: 0,   # 775 
+    13: 0,   # 703
+    14: 0,   # 789
+    15: 0,   # 731
+    16: 0,   # 0
+    17: 346  # 796
+}
 # ----------------
 # HELPER FUNCTIONS
 # ----------------
@@ -75,10 +93,13 @@ def prepare_prompt(
 
     return f"""
                 Write an abstract of a {main_topic} paper on Web of Science, following the requirements below: \n
+
                     1. {first_condition} \n
                     2. the paper abstract should focus on '{subtopic}'; \n
                     3. should be in length between {length} words and {int(length) + 60} words; \n
-                    4. the style of the paper should be '{style}'
+                    4. the style of the paper should be '{style}' \n
+
+                Return only the abstract.
             """
 
 
@@ -127,7 +148,7 @@ def clean_str(string: str) -> str:
     if len(splits) == 2:
         # Only use the actual abstract text
         string = splits[-1]
-    string = re.sub(r"[^A-Za-z0-9(),.!?\"\']", " ", string)
+    string = re.sub(r"[^A-Za-z0-9(),.:!?\"\']", " ", string)
     string = re.sub(r"\s{2,}", " ", string)
     return string.strip()
 
@@ -254,7 +275,7 @@ def main(args):
     asyncio.set_event_loop(loop)
 
     # Produce examples for each sdg goal
-    for sdg_id in [1, 2, 3]:
+    for sdg_id in sdg_ids:
 
         print(f"SDG Goal: {id2label[sdg_id]}.")
 
@@ -262,7 +283,7 @@ def main(args):
         random.seed(int(sdg_id + 1234))
 
         # Create list of random attributes dictionaries
-        prompt_attributes = [construct_random_prompt_attributes(sdg_id, attr_dict) for _ in range(args.n_sample)]
+        prompt_attributes = [construct_random_prompt_attributes(sdg_id, attr_dict) for _ in range(args.n_sample[sdg_id])]
 
         # Create list of prompts based on the previous attributes dictionaries
         prompt_list = [[{'role': 'user', 'content': construct_prompts_from_attributes(id2label[sdg_id], attributes)}] for attributes in prompt_attributes]
@@ -355,14 +376,8 @@ if __name__ == '__main__':
         type=float
     )
     parser.add_argument(
-        '--n_sample',
-        default=3,
-        type=int,
-        help='number of generated examples per class'
-    )
-    parser.add_argument(
         '--batch_size',
-        default=2,
+        default=20,
         type=int,
         help='number of generated examples per batch'
     )
@@ -383,5 +398,6 @@ if __name__ == '__main__':
 
     # Add specific arguments
     args.attributes = ["length", "subtopics", "style"]
+    args.n_sample = SAMPLE_DICT
 
     main(args)
