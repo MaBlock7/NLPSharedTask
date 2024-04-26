@@ -1,15 +1,17 @@
-import openai
+import argparse
 import asyncio
+import datetime
+import json
 import os
+import random
 import re
 import time
-import json
-import random
+
+import openai
 
 from typing import Any
 from synthetic_data.utils import (
-    load_attributes,
-    init_default_parser
+    load_attributes
 )
 from essentials.utils import load_env_variable
 from essentials.data_functions import read_data
@@ -131,11 +133,16 @@ def clean_str(string: str) -> str:
     return string.strip()
 
 
-def save_generated_examples(output_dir: str, sdg_id: int, results: list[dict], attempt: int, top_p: float):
+def save_generated_examples(
+    output_dir: str,
+    timestamp: str,
+    model: str,
+    sdg_id: int,
+    results: list[dict]):
     """Saves results to output directory."""
 
-    prefix = f"gen_results/sdg_goal_{sdg_id}/train_p_{top_p}_{attempt}.jsonl"
-    os.makedirs(f"{output_dir}/gen_results/sdg_goal_{sdg_id}", exist_ok=True)
+    prefix = f"{model}/sdg_goal_{sdg_id}/{timestamp}_synthetic_data.jsonl"
+    os.makedirs(f"{output_dir}/{model}/sdg_goal_{sdg_id}", exist_ok=True)
     with open(f"{output_dir}/{prefix}", 'a') as f:  # append mode
         for example in results:
             f.write(json.dumps(example) + "\n")
@@ -214,13 +221,11 @@ def call_api_async(
 
 def main(args):
 
-    # Read in raw data
-    abstract_df = read_data(ABSTRACTS) 
-    goals_df = read_data(GOALS, format='csv').rename(columns={'goal': 'SDG', 'description': 'DESC'})
+    # Current timestamp
+    timestamp = datetime.datetime.now().strftime('%Y-%m-%d_%H-%M')
 
-    # Merge DataFrames to working data
-    df = abstract_df.merge(goals_df, on='SDG', how='left')
-    df.loc[df.DESC.isna(), 'DESC'] = 'no_sdg'
+    # Read in raw data
+    df = read_data(GOALS, format='csv').rename(columns={'goal': 'SDG', 'description': 'DESC'})
 
     # Create sdgID to label text mapping
     id2label = dict(zip(df['SDG'].unique(), df['DESC'].unique()))
@@ -228,9 +233,19 @@ def main(args):
     print(sdg_ids)
 
     # Define OpenAI client
-    client = openai.AsyncOpenAI(
-        api_key=load_env_variable(variable_name='OPENAI_API_KEY')
-    )
+    together_models = {
+        'meta-llama/Llama-3-70b-chat-hf': 'llama-3-70b',
+        'mistralai/Mixtral-8x22B-Instruct-v0.1': 'mixtral-8x22B'
+    }
+    if args.model_name in together_models.keys():
+        client = openai.AsyncOpenAI(
+            api_key=load_env_variable(variable_name='TOGETHER_API_KEY'),
+            base_url="https://api.together.xyz/v1"
+        )
+    else:
+        client = openai.AsyncOpenAI(
+            api_key=load_env_variable(variable_name='OPENAI_API_KEY')
+        )
 
     # Create attribute dictionary with choices for random sampling
     attr_dict = {attr: process_attributes(attr) for attr in args.attributes}
@@ -240,7 +255,7 @@ def main(args):
     asyncio.set_event_loop(loop)
 
     # Produce examples for each sdg goal
-    for sdg_id in sdg_ids:
+    for sdg_id in [1, 2, 3]:
 
         print(f"SDG Goal: {id2label[sdg_id]}.")
 
@@ -290,10 +305,10 @@ def main(args):
 
                     save_generated_examples(
                         args.output_dir,
+                        timestamp,
+                        together_models.get(args.model_name, args.model_name),
                         sdg_id,
-                        final_results,
-                        attempts,
-                        args.top_p
+                        final_results
                     )
 
                     # Stop if successful request
@@ -321,7 +336,50 @@ def main(args):
 if __name__ == '__main__':
 
     # Init parser and add arguments
-    parser = init_default_parser()
+    parser = argparse.ArgumentParser('')
+
+    parser.add_argument(
+        '--model_name',
+        default='gpt-3.5-turbo',
+        choices=['gpt-3.5-turbo', 'gpt-4-turbo', 'meta-llama/Llama-3-70b-chat-hf', 'mistralai/Mixtral-8x22B-Instruct-v0.1'],
+        type=str,
+        help='name of the openAI model to use'
+    )
+    parser.add_argument(
+        '--temperature',
+        default=1.0,
+        type=float
+    )
+    parser.add_argument(
+        '--top_p',
+        default=1.0,
+        type=float
+    )
+    parser.add_argument(
+        '--n_sample',
+        default=3,
+        type=int,
+        help='number of generated examples per class'
+    )
+    parser.add_argument(
+        '--batch_size',
+        default=2,
+        type=int,
+        help='number of generated examples per batch'
+    )
+    parser.add_argument(
+        '--max_tokens',
+        default=512,
+        type=int,
+        help='the maximum number of tokens for generation'
+    )
+    parser.add_argument(
+        '--output_dir',
+        default='synthetic_data',
+        type=str,
+        help='the folder for saving the generated text'
+    )
+
     args = parser.parse_args()
 
     # Add specific arguments
