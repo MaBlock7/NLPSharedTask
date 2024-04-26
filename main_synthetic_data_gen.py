@@ -16,7 +16,6 @@ from synthetic_data.utils import (
 from essentials.utils import load_env_variable
 from essentials.data_functions import read_data
 from essentials.config import (
-    ABSTRACTS,
     GOALS
 )
 
