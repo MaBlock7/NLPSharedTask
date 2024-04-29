@@ -41,6 +41,27 @@ SAMPLE_DICT = {
     16: 0,   # 0
     17: 346  # 796
 }
+
+SAMPLE_DICT = {
+    0: 1000
+    1: 1000,    # 745
+    2: 1000,    # 758
+    3: 1000,    # 767
+    4: 1000,    # 754
+    5: 1000,    # 725
+    6: 1000,    # 648
+    7: 1000,    # 742
+    8: 1000,    # 769
+    9: 1000,    # 765
+    10: 1000,   # 732
+    11: 1000,   # 779
+    12: 1000,   # 775 
+    13: 1000,   # 703
+    14: 1000,   # 789
+    15: 1000,   # 731
+    16: 0,   # 0
+    17: 1500  # 796
+}
 # ----------------
 # HELPER FUNCTIONS
 # ----------------
@@ -87,15 +108,15 @@ def prepare_prompt(
     """Fill in the prompt template with random attributes."""
 
     if sdg_goal == 'no_sdg':
-        first_condition = "the paper should not be related to any UN SDG goal"
+        first_condition = "is unrelated to any UN SDG goal"
     else:
-        first_condition = f"the paper should be related to the UN SDG goal of {sdg_goal} but do not mention the SDG goal explicitly;"
+        first_condition = f"aligns subtly with the themes of the UN SDG goal {sdg_goal}, though without explicit mention of the goal itself;"
 
     return f"""
-                Write an abstract of a {main_topic} paper on Web of Science, following the requirements below: \n
+                Write an abstract of a scholarly article from the Web of Science database concerning {main_topic}. Ensure the abstract: \n
 
                     1. {first_condition} \n
-                    2. the paper abstract should focus on '{subtopic}'; \n
+                    2. focuses on '{subtopic}', incorporating relevant theories, methodologies, and findings; \n
                     3. should be in length between {length} words and {int(length) + 60} words; \n
                     4. the style of the paper should be '{style}' \n
 
@@ -178,6 +199,8 @@ async def dispatch_openai_requests(
     temperature: float,
     max_tokens: int,
     top_p: float,
+    frequency_penalty: float,
+    presence_penalty: float,
 ) -> list[str]:
     """
     Dispatches requests to OpenAI API asynchronously.
@@ -199,6 +222,8 @@ async def dispatch_openai_requests(
             temperature=temperature,
             max_tokens=max_tokens,
             top_p=top_p,
+            frequency_penalty=frequency_penalty,
+            presence_penalty=presence_penalty
         )
         for x in messages_list
     ]
@@ -212,6 +237,8 @@ def call_api_async(
     temperature: float,
     max_tokens: int,
     top_p: float,
+    frequency_penalty: float,
+    presence_penalty: float,
     loop: asyncio.AbstractEventLoop
 ) -> list[str]:
     """Asynchronous API calling function using an explicit loop."""
@@ -226,6 +253,8 @@ def call_api_async(
             temperature=temperature,
             max_tokens=max_tokens,
             top_p=top_p,
+            frequency_penalty=frequency_penalty,
+            presence_penalty=presence_penalty
         )
     )
     ans = [x.choices[0].message.content for x in response]
@@ -307,6 +336,8 @@ def main(args):
                         args.temperature,
                         args.max_tokens,
                         args.top_p,
+                        args.frequency_penalty,
+                        args.presence_penalty,
                         loop
                     )
 
@@ -373,6 +404,16 @@ if __name__ == '__main__':
     parser.add_argument(
         '--top_p',
         default=1.0,
+        type=float
+    )
+    parser.add_argument(
+        '--frequency_penalty',
+        default=0.5,
+        type=float
+    )
+    parser.add_argument(
+        '--presence_penalty',
+        default=0.4,
         type=float
     )
     parser.add_argument(
