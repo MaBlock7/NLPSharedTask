@@ -98,7 +98,7 @@ def preprocess_zofa_data(df_zofa: pd.DataFrame) -> pd.DataFrame:
 
 def preprocess_semantic_scholar_data(df_scholar: pd.DataFrame, null_class=True) -> pd.DataFrame:
     # Add is_abstract dummy to zofa
-    df_scholar['is_abstract'] = 1
+    df_scholar['is_abstract'] = 2
     # Rename columns
     if null_class:
         df_scholar = df_scholar.rename(columns={'abstract': 'text',
@@ -132,7 +132,7 @@ def preprocess_osdg_data(df_osdg: pd.DataFrame, threshold=0.5) -> pd.DataFrame:
 
 
 def preprocess_synth_data(df_synth: pd.DataFrame) -> pd.DataFrame:
-    df_synth['is_abstract'] = 2
+    df_synth['is_abstract'] = 3
     df_synth['text'] = df_synth.text.apply(clean_synth_text)
     df_synth = df_synth.rename(columns={'sdg_id': 'label'})
     return df_synth[['text', 'label', 'is_abstract']]
