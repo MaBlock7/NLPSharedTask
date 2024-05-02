@@ -1,0 +1,10 @@
+Experimental: Tests hypotheses by manipulating variables to establish cause-and-effect relationships, using controlled experiments.
+Theoretical: Constructs and articulates abstract concepts to develop theoretical frameworks for real-world application.
+Review: Compiles and evaluates existing research to summarize findings and highlight research gaps and patterns.
+Case Study: Provides an in-depth analysis of a specific event or individual to understand underlying principles.
+Descriptive: Observes and describes phenomena as they occur naturally, detailing the observed features without manipulation.
+Correlational: Investigates relationships between variables to assess the strength and direction of associations.
+Longitudinal: Observes the same subjects over time to document changes and trends.
+Cross-Sectional: Gathers data from a population at a single time point to provide a snapshot of various characteristics.
+Action Research: Collaboratively addresses real-world problems, combining research with practical action for iterative improvements.
+Mixed-Methods Study: Integrates qualitative and quantitative methods to leverage their strengths for comprehensive insights.

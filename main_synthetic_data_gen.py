@@ -22,6 +22,7 @@ from essentials.config import (
 
 # Data paths
 SUBTOPICS = "synthetic_data/raw_data/attributes/subtopics/subtopics_new.json"
+"""
 SAMPLE_DICT = {
     1: 2,    # 745
     2: 2,    # 758
@@ -43,7 +44,7 @@ SAMPLE_DICT = {
 }
 """
 SAMPLE_DICT = {
-    0: 1000
+    0: 500,
     1: 1000,    # 745
     2: 1000,    # 758
     3: 1000,    # 767
@@ -60,9 +61,9 @@ SAMPLE_DICT = {
     14: 1000,   # 789
     15: 1000,   # 731
     16: 0,   # 0
-    17: 1500  # 796
+    17: 1600  # 796
 }
-"""
+
 # ----------------
 # HELPER FUNCTIONS
 # ----------------
@@ -104,6 +105,7 @@ def prepare_prompt(
     main_topic: str,
     subtopic: str,
     length: int,
+    abstract_start: str,
     style: str
 ) -> str:
     """Fill in the prompt template with random attributes."""
@@ -111,15 +113,16 @@ def prepare_prompt(
     if sdg_goal == 'no_sdg':
         first_condition = "is unrelated to any UN SDG goal"
     else:
-        first_condition = f"aligns subtly with the themes of the UN SDG goal {sdg_goal}, though without explicit mention of the goal itself;"
+        first_condition = f"Aligns subtly with the themes of the UN SDG goal {sdg_goal}, though without explicit mention of the goal itself;"
 
     return f"""
                 Write an abstract of a scholarly article from the Web of Science database concerning {main_topic}. Ensure the abstract: \n
 
                     1. {first_condition} \n
-                    2. focuses on '{subtopic}', incorporating relevant theories, methodologies, and findings; \n
-                    3. should be in length between {length} words and {int(length) + 60} words; \n
-                    4. the style of the paper should be '{style}' \n
+                    2. Focuses on '{subtopic}'; \n
+                    3. starts by {abstract_start};
+                    4. Is between {length} and {int(length) + 60} words in length; \n
+                    5. Reflects a study that {style} \n
 
                 Return only the abstract.
             """
@@ -137,6 +140,7 @@ def construct_random_prompt_attributes(
     # Randomly choose one of the subtopics within the chosen area
     sub_topic = random.sample(attr_dict['subtopics'][str(sdg_id)][main_topic]['Subtopics'], 1)[0]
 
+    abstract_start = random.sample(attr_dict["abstract_start"], 1)[0]
     style = random.sample(attr_dict["style"], 1)[0]
     length = random.sample(attr_dict["length"], 1)[0]
 
@@ -145,6 +149,7 @@ def construct_random_prompt_attributes(
         'main_topic': main_topic,
         'sub_topic': sub_topic,
         'style': style,
+        'abstract_start': abstract_start,
         'length': int(length)
     }
 
@@ -160,13 +165,14 @@ def construct_prompts_from_attributes(
         random_attributes['main_topic'],
         random_attributes['sub_topic'],
         random_attributes['length'],
+        random_attributes['abstract_start'],
         random_attributes['style']
     )
 
 
 def clean_str(string: str) -> str:
     """Cleans model output."""
-    splits = string.split('Abstract')
+    splits = string.split('Abstract:')
     if len(splits) == 2:
         # Only use the actual abstract text
         string = splits[-1]
@@ -409,17 +415,17 @@ if __name__ == '__main__':
     )
     parser.add_argument(
         '--frequency_penalty',
-        default=0.5,
-        type=float
-    )
-    parser.add_argument(
-        '--presence_penalty',
         default=0.4,
         type=float
     )
     parser.add_argument(
+        '--presence_penalty',
+        default=0.3,
+        type=float
+    )
+    parser.add_argument(
         '--batch_size',
-        default=20,
+        default=40,
         type=int,
         help='number of generated examples per batch'
     )
@@ -439,7 +445,7 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     # Add specific arguments
-    args.attributes = ["length", "subtopics", "style"]
+    args.attributes = ["length", "subtopics", "style", "abstract_start"]
     args.n_sample = SAMPLE_DICT
 
     main(args)

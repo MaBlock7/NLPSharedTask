@@ -55,11 +55,20 @@ def read_synthetic_data(base_dir=os.getcwd(), model='llama-3-70b'):
     return df_synthetic
 
 
+def remove_text_in_brackets(text: str) -> str:
+    pattern = r'\([^()]*\)'
+    while re.search(pattern, text):
+        text = re.sub(pattern, '', text)
+    return text
+
+
 def clean_synth_text(text: str) -> str:
-    if 'Web of Science' in text:
-        return text.split('Web of Science ')[-1]
-    if 'abstract' in text:
-        return text.split('abstract ')[-1]
+    # Remove texts in brackets
+    text = remove_text_in_brackets(text)
+
+    if "here is" in text.lower():
+        text_list = text.split(': ')[1:]
+        return': '.join(text_list)
     else:
         return text
 
@@ -169,7 +178,7 @@ def save_data(df: pd.DataFrame, args: argparse.Namespace) -> None:
     null_included = '_with_null' if args.include_null else ''
     synth_included = '_with_synth' if args.include_synth else ''
     weak_included = '_with_weakly_labeled' if args.include_weakly_labeled_data else ''
-    file_path = f"{args.output_dir}/cleaned_data{null_included}{weak_included}{synth_included}.csv"
+    file_path = f"{args.output_dir}/data{null_included}{weak_included}{synth_included}_{args.model_name}.csv"
     df.to_csv(file_path, index=False)
     print(f"---Saved data to {file_path}---")
 
@@ -210,7 +219,7 @@ def main(args):
     if args.include_synth:
         print("---Adding synthetic data---")
         # Load synth data
-        df_synth = read_synthetic_data()
+        df_synth = read_synthetic_data(model=args.model_name)
         df_synth_prep = preprocess_synth_data(df_synth)
         # Create ZOFA + OSDG + SYNTH DataFrame
         df_prep = pd.concat([df_prep, df_synth_prep])
@@ -235,15 +244,21 @@ if __name__ == '__main__':
     )
     parser.add_argument(
         '--include_null',
-        default=False,
+        default=True,
         type=bool,
         help='if True, NULL class is included in the data'
     )
     parser.add_argument(
         '--include_synth',
-        default=False,
+        default=True,
         type=bool,
         help='if True, synthetic data is added to the data'
+    )
+    parser.add_argument(
+        '--model_name',
+        default='',
+        type=str,
+        help='name of the model for the synthetic data'
     )
     parser.add_argument(
         '--include_weakly_labeled_data',
