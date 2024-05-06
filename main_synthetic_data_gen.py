@@ -425,7 +425,7 @@ if __name__ == '__main__':
     )
     parser.add_argument(
         '--batch_size',
-        default=40,
+        default=100,
         type=int,
         help='number of generated examples per batch'
     )
