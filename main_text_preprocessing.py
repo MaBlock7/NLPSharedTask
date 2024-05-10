@@ -202,7 +202,7 @@ def main(args):
     if args.include_null:
         print("---Adding Null data for garbage class---")
         # Load garbage data
-        df_null = read_data('garbage_class/null_labels_clean.csv', format='csv')
+        df_null = read_data('garbage_class/balanced.csv', format='csv')
         df_null_prep = preprocess_semantic_scholar_data(df_null)
         df_prep = pd.concat([df_prep, df_null_prep])
     else:  # Remove 0 since None class is not part of OSDG
